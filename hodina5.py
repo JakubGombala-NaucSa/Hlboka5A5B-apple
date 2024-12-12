@@ -8,11 +8,13 @@ platno.pack()
 
 lopticky = []
 
+a = tk.PhotoImage(file="Apple.png")
 def vytvor_lopticky():
+    global a
     x = -10
     for i in range(10):
         x += 20
-        lopticka = platno.create_oval(x, 10, x+20, 30)
+        lopticka = platno.create_image(x, 20, image=a)
         lopticky.append(lopticka)
 
 vytvor_lopticky()
